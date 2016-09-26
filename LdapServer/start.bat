@@ -1,0 +1,1 @@
+unboundid-ldapsdk-3.1.1-se\tools\in-memory-directory-server --baseDN "dc=com" --port 1234 --ldifFile example.ldif

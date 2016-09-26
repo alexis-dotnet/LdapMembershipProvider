@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.alert = function () { };
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css) {
+            if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
+            else $('head > link').filter(':first').replaceWith(defaultCSS);
+        }
+        $(document).ready(function () {
+            var iframe_height = parseInt($('html').height());
+            window.parent.postMessage(iframe_height, 'http://www.designsave.com');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="container" id="formContainer">
+
+                <h1>User already logged in!</h1>
+
+            </div>
+            <!-- /container -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+
+            // Checking for CSS 3D transformation support
+            $.support.css3d = supportsCSS3D();
+
+            // A helper function that checks for the
+            // support of the 3D CSS3 transformations.
+            function supportsCSS3D() {
+                var props = [
+                    'perspectiveProperty', 'WebkitPerspective', 'MozPerspective'
+                ], testDom = document.createElement('a');
+
+                for (var i = 0; i < props.length; i++) {
+                    if (props[i] in testDom.style) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>
